@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Task(models.Model):
-    task_name = models.CharField(max_length=255)
-    task_desc = models.TextField()
+    title = models.CharField(max_length=255)
+    content = models.TextField()
     was_published = models.DateTimeField(auto_now_add=True)
     cat = models.ForeignKey('Category', on_delete=models.CASCADE, null=True)
 
